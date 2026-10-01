@@ -1,0 +1,29 @@
+# AccuWeather to Excel Automator (`weathernew.py`)
+
+This repository contains a Python script that utilizes GUI automation to extract current weather data for Pondicherry from AccuWeather and automatically save it into a new Microsoft Excel workbook.
+
+## Overview
+
+The script uses the `pyautogui` library to simulate human keyboard and mouse interactions. It sequentially performs the following actions:
+1. Opens Google Chrome via the Windows Run dialog.
+2. Selects a specific Chrome user profile.
+3. Navigates to the AccuWeather forecast page for Pondicherry.
+4. Copies all text data from the webpage to the clipboard.
+5. Launches Microsoft Excel and opens a blank workbook.
+6. Pastes the extracted weather data.
+7. Saves the workbook automatically as `weather_data.xlsx`.
+8. Captures a screenshot of the final state for logging purposes.
+
+## Prerequisites
+
+Because this script relies on system-level keyboard shortcuts and specific application commands, it requires the following environment:
+* **Operating System:** Windows (relies on the `Win` key and `start excel` command).
+* **Software:** 
+  * Python 3.x
+  * Google Chrome
+  * Microsoft Excel
+
+### Required Python Libraries
+Install the necessary third-party dependencies using pip:
+```bash
+pip install pyautogui pyscreeze
